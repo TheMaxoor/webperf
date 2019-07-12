@@ -32,7 +32,7 @@ class Header extends React.Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography
-                            variant="headline"
+                            variant="h4"
                             color="inherit"
                             className={this.props.classes.flex}
                         >

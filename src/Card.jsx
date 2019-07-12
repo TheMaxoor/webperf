@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const styles = theme => ({
     root: {
-        margin: theme.spacing.unit
+        margin: theme.spacing()
     },
     card: {
         width: 300
@@ -31,11 +31,7 @@ class MyCard extends React.Component {
                         image={this.props.image}
                     />
                     <CardContent>
-                        <Typography
-                            gutterBottom
-                            variant="headline"
-                            component="h2"
-                        >
+                        <Typography gutterBottom variant="h4" component="h2">
                             {this.props.title}
                         </Typography>
                         <Typography component="p">
@@ -46,7 +42,7 @@ class MyCard extends React.Component {
                         <Button
                             size="small"
                             color="primary"
-                            variant="raised"
+                            variant="contained"
                             component={Link}
                             to={this.props.route}
                         >
