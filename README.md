@@ -8,6 +8,11 @@ Branches are automatically deployed on push event.
 
 ## Commands
 
+Install dependencies : 
+```bash
+npm install
+```
+
 Build :
 
 ```bash
