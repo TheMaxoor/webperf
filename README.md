@@ -1,26 +1,27 @@
-Forked from https://glitch.com/edit/#!/tony
+# Accessing website
 
-# Welcome to Glitch
+Base URL: https://webperf.mrossignol.fr
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Branches URLs : https://\<branch-name>.mrossignol.fr
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+Branches are automatically deployed on push event.
 
-Find out more [about Glitch](https://glitch.com/about).
+## Commands
 
-## Your Project
+Build :
 
-On the front-end,
+```bash
+npm run build
+```
 
--   edit `public/client.js`, `public/style.css` and `views/index.html`
--   drag in `assets`, like images or music, to add them to your project
+Local dev start :
 
-On the back-end,
+```bash
+npm run develop
+```
 
--   your app starts at `server.js`
--   add frameworks and packages in `package.json`
--   safely store app secrets in `.env` (nobody can see this but you and people you invite)
+Project start :
 
-## Made by [Glitch](https://glitch.com/)
-
-\ ゜ o ゜)ノ
+```bash
+npm run start
+```
