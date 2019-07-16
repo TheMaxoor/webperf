@@ -10,11 +10,13 @@
         width: 340px;
         position: fixed;
         right: 0px;
-        top: 66px;
+        top: 65px;
         height: calc(100vh - 60px);
         
         &__title {
-            background-color: #e91845;
+            background-color: $color_primary;
+            font-family: $font_primary;
+            font-weight: 600;
             height: 50px;
             display: flex;
             flex-direction: row;
@@ -45,11 +47,13 @@
                     margin-right: 4px;
                 }
                 &__tag {
-                    color: #e91845;
+                    color: $color_primary;
+                    font-weight: 600;
                     margin-right: 4px;
                 }
                 &__text {
                     display: inline;
+                    color: $color_secondary;
                     line-height: 19px;
                 }
             }

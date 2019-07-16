@@ -10,16 +10,18 @@
         padding: 20px;
 
         &__tag {
-            background-color: #e91845;
+            background-color: $color_primary;
+            font-family: $font_primary;
             padding: 5px;
             color: white;
             width: fit-content;
             display: block;
             text-transform: uppercase;
+            font-size: 13px;
         }
     
         &__title {
-            color: black;
+            color: $color_secondary;
             font-size: 20px;
             margin-top: 12px;
             line-height: 24px;
@@ -34,7 +36,7 @@
 
 .wp-small-article {
     width: 330px;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid $color_secondary;
     display: flex;
     flex-direction: column;
 }

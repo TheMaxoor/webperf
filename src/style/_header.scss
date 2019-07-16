@@ -1,4 +1,5 @@
 .wp-header {
+    box-sizing: border-box;
     position: fixed;
     z-index: 1000;
     top: 0px;
@@ -13,7 +14,61 @@
     padding-right: 20px;
     border-bottom: 1px solid lightgrey;
 
-    &__logo {
+    &__menu {
         height: 40px;
+        border: 1px solid lightGrey;
+        text-transform: uppercase;
+        color: $color_secondary;
+    }
+
+    &__logo {
+        height: 35px;
+        margin-left: 20px;
+    }
+
+    &__search {
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid lightgrey;
+        font-size: 13px;
+        width: 100%;
+        max-width: 500px;
+    } 
+
+    &__abo,
+    &__facebook,
+    &__twitter {
+        height: 37px;
+        padding: 0px 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: none;
+        background-color: #16a085;
+        color: white;
+        font-size: 13px;
+        text-transform: uppercase;
+        border-bottom: 3px solid #107763;   
+    }
+    &__twitter, 
+    &__facebook {
+        border-bottom: none;
+        padding: 0px 10px;
+
+        svg {
+            fill: #fff;
+            height: auto;
+            width: 19px;
+            margin-top: 5px;
+        }
+    }
+
+    &__twitter {
+        background-color: #00acee;
+    }
+    &__facebook {
+        background-color: #3b5997;
     }
 }
