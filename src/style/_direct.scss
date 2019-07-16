@@ -1,0 +1,59 @@
+.wp-direct {
+    width: 340px;
+    margin-top: -50px;
+    
+
+    
+    &__body {
+        background-color: white;
+        border-left: 1px solid lightGrey;
+        width: 340px;
+        position: fixed;
+        right: 0px;
+        top: 66px;
+        height: calc(100vh - 60px);
+        
+        &__title {
+            background-color: #e91845;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 20px;
+    
+            h2 {
+                text-transform: uppercase;
+                color: white;
+            }
+        }
+
+        &__collection {
+            height: 100%;
+            overflow-y: scroll;
+    
+            &__item {
+                border-bottom: 1px solid lightGrey;
+    
+                a {
+                    padding: 20px;
+                    display: inline-block;
+                    text-decoration: none;
+                }
+    
+                &__date {
+                    color: #878787;
+                    margin-right: 4px;
+                }
+                &__tag {
+                    color: #e91845;
+                    margin-right: 4px;
+                }
+                &__text {
+                    display: inline;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+}

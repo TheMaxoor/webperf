@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'swiper';
+@import 'header';
+@import "article";
+@import "fleuve";
+@import 'direct';
+@import 'ad';
+
+body {
+    padding-top: 100px;
+    background-color: #f4f4f4;
+}
+
+.wp-homepage {
+    display: flex;
+    flex-direction: row;
+}
