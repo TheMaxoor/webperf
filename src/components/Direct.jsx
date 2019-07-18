@@ -1,10 +1,18 @@
 import React from 'react';
+import DirectVideo from './DirectVideo'
 
 class Direct extends React.Component {
     render(){
         const childElements = this.props.elements.map(function(element, key){
+
+            if (element.video){
+                return (
+                    <DirectVideo key={key} element={element} />
+                )
+            }
+
            return (
-               <li className="wp-direct__body__collection__item">
+               <li key={key} className="wp-direct__body__collection__item">
                    <a>
                         <span className="wp-direct__body__collection__item__date">{element.date}</span>
                         <span className="wp-direct__body__collection__item__tag">{element.tag}.</span>

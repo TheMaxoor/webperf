@@ -6,9 +6,9 @@ import Ad from './Ad';
 class Fleuve extends React.Component {
     render() {
         const childElements = this.props.elements.map(function(element, key){
-            if (key == 7){
+            if (key > 0 && key % 7 == 0){
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={key}>
                         <Ad width="small" />
                         <Article key={key} item={element} />
                     </React.Fragment>
