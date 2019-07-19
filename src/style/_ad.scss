@@ -1,18 +1,54 @@
 .wp-ad {
+    &.loaded {
+        animation: ads-animation 1s infinite;
+    }
+
     &-small {
+        display: flex;
         height: 300px;
         width: 300px;
+        align-items: center;
+        justify-content: center;
         background-color: #2c3e50;
-        margin: 10px;
         border: 4px solid white;
+        margin: 10px;
     }
     &-long {
+        display: flex;
         height: 90px;
         width: 670px;
+        align-items: center;
+        justify-content: center;
         background-color: #2c3e50;
         margin: 10px;
         border: 4px solid white;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .content {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        animation: blink-animation 2s steps(5, start) infinite;
+    }
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes ads-animation {
+    0%,
+    49% {
+        background-color: rgb(117, 209, 63);
+        border: 3px solid #e50000;
+    }
+    50%,
+    100% {
+        background-color: #e50000;
+        border: 3px solid rgb(117, 209, 63);
     }
 }

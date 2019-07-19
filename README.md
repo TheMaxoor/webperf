@@ -8,7 +8,8 @@ Branches are automatically deployed on push event.
 
 ## Commands
 
-Install dependencies : 
+Install dependencies :
+
 ```bash
 npm install
 ```
@@ -17,6 +18,11 @@ Build :
 
 ```bash
 npm run build
+```
+
+```bash
+npm run build:dev
+npm run build:prod # For minification
 ```
 
 Local dev start :
