@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
     devtool: false,
     context: __dirname,
     entry: './src/index.jsx',
@@ -57,10 +57,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['!libs/*.*']
+        }),
         new HtmlWebpackPlugin({
             template: 'template.html'
         }),
-        new CopyWebpackPlugin([{ from: './libs/*' }])
+        new CopyWebpackPlugin([{ from: './libs/*', copyUnmodified: true }])
     ]
 };

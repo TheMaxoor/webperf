@@ -1,11 +1,19 @@
 import React from 'react';
 
-
 class Article extends React.Component {
-    render(){
-
-        const classname = this.props.item.type !== "image" ? "wp-small-article" : "wp-image-article";
-        const {photoContent, image, imageSmall, imageSmallWebp, tag, title} = this.props.item;
+    render() {
+        const classname =
+            this.props.item.type !== 'image'
+                ? 'wp-small-article'
+                : 'wp-image-article';
+        const {
+            photoContent,
+            image,
+            imageSmall,
+            imageSmallWebp,
+            tag,
+            title
+        } = this.props.item;
 
         return (
             <article className={`${classname} wp-article`}>
@@ -23,7 +31,7 @@ class Article extends React.Component {
                     </div>
                 </a>
             </article>
-        )
+        );
     }
 }
 
