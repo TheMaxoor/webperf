@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ffb686f7-67ee-417a-8fa7-026104022151/deploy-status)](https://app.netlify.com/sites/dreamy-goldwasser-6db82e/deploys)
+
 # Accessing website
 
 Base URL: https://webperf.mrossignol.fr
