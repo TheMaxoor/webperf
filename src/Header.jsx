@@ -5,7 +5,6 @@ class Header extends React.Component {
     render() {
         return (
             <div className="wp-header">
-                <button className="wp-header__menu">Menu</button>
                 <img className="wp-header__logo" src={Logo} alt="logo" />
                 <input
                     className="wp-header__search"
