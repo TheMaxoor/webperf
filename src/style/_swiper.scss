@@ -1,0 +1,12 @@
+.swiper {
+    display: flex;
+    flex-direction: row;
+
+    &__card {
+        height: 400px;
+        width: 300px;
+        border-radius: 4px;
+        overflow: hidden;
+        overflow: auto;
+    }
+}

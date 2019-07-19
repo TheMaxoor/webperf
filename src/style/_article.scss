@@ -1,0 +1,59 @@
+.wp-article {
+    margin: 10px;
+    background-color: white;
+
+    a {
+        text-decoration: none;
+    }
+
+    &__text {
+        padding: 20px;
+
+        &__tag {
+            background-color: $color_primary;
+            font-family: $font_primary;
+            padding: 5px;
+            color: white;
+            width: fit-content;
+            display: block;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+    
+        &__title {
+            color: $color_secondary;
+            font-size: 20px;
+            margin-top: 12px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.wp-small-article {
+    width: 330px;
+    border-bottom: 4px solid $color_secondary;
+    display: flex;
+    flex-direction: column;
+}
+
+.wp-image-article {
+    width: 680px;
+
+    .wp-article {
+        &__text {
+            position: absolute;
+            bottom: 30px;
+
+            &__title {
+                color: white;
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
