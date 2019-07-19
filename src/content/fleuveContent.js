@@ -1,10 +1,10 @@
 import sncfGare from '../images/sncfGare1.jpg';
 import sncfGareSmall from '../images/sncfGareSmall.jpg';
-import sncfGareSmallWebp from '../images/sncfGareSmall.webp';
+
 
 
 const fleuveContent = [
-    {tag:"Le fil vert", title: "Climat : «Prendre le train doit devenir un acte citoyen»", photoContent: true, image: sncfGare, imageSmall: sncfGareSmall, imageSmallWebp: sncfGareSmallWebp},
+    {tag:"Le fil vert", title: "Climat : «Prendre le train doit devenir un acte citoyen»", photoContent: true, image: '/images/sncfGare1.jpg', imageSmall: '/images/sncfGareSmall.jpg', imageSmallWebp: '/images/sncfGareSmall.webp'},
     {tag:"Chronique «aux petits soins»", title: "VIH : un rapport contre le ronronnement ambiant", image: "https://medias.liberation.fr/photo/1235972--.jpg?modified_at=1563203253&ratio_x=03&ratio_y=02"},
     {type:"image", tag:"Festivals", title: "Ron Carter, le son en image", image: "https://medias.liberation.fr/photo/1235976-ron_carter_with-bass_marc_gilgen_swjpg.jpg?modified_at=1563214043&width=975"},
     {tag:"Checknews", title: "De jeunes youtubeurs ont-ils été payés pour faire l'éloge du SNU ?"},

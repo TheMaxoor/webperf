@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
     mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
@@ -32,7 +34,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: './imgs/[name].[ext]'
+                            name: './images/[name].[ext]'
                         }
                     }
                 ]
@@ -63,6 +65,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'template.html'
         }),
-        new CopyWebpackPlugin([{ from: './libs/*', copyUnmodified: true }])
+        new CopyWebpackPlugin([{ from: './libs/*', copyUnmodified: true }]),
+        new CopyWebpackPlugin([
+            {
+                from: './src/images/'
+            }
+        ]),
+        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+        new ImageminWebpWebpackPlugin()
     ]
 };
