@@ -1,7 +1,3 @@
-import sncfGare from '../images/sncfGare1.jpg';
-import sncfGareSmall from '../images/sncfGareSmall.jpg';
-
-
 
 const fleuveContent = [
     {tag:"Le fil vert", title: "Climat : «Prendre le train doit devenir un acte citoyen»", photoContent: true, image: '/images/sncfGare1.jpg', imageSmall: '/images/sncfGareSmall.jpg', imageSmallWebp: '/images/sncfGareSmall.webp'},
