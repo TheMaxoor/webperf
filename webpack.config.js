@@ -60,17 +60,17 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin({
-            cleanAfterEveryBuildPatterns: ['!libs/*.*']
+            cleanAfterEveryBuildPatterns: ['!libs/*.*', '!images/**/*.*']
         }),
         new HtmlWebpackPlugin({
             template: 'template.html'
         }),
-        new CopyWebpackPlugin([{ from: './libs/*', copyUnmodified: true }]),
         new CopyWebpackPlugin([
+            { from: './libs/*', copyUnmodified: true },
             {
-                from: './src/images/',
-                to: './images/',
-                copyUnmodified: true
+                from: './images',
+                to: 'images',
+                context: 'src'
             }
         ]),
         new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
