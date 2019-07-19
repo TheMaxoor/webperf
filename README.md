@@ -27,6 +27,11 @@ npm run build:dev
 npm run build:prod # For minification
 ```
 
+Watch :
+```bash
+npm run watch
+```
+
 Local dev start :
 
 ```bash

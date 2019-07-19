@@ -69,7 +69,8 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: './src/images/',
-                to: './images/'
+                to: './images/',
+                copyUnmodified: true
             }
         ]),
         new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
