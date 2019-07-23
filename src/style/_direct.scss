@@ -44,6 +44,31 @@
 
                 &__video {
                     padding-bottom: 10px;
+                    position: relative;
+
+                    &__miniature:before {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 16px 0 16px 29px;
+                        border-color: transparent transparent transparent white;
+                        opacity: 0.8;
+                        left: 140px;
+                        top: 70px;
+                        z-index: 10;
+                    }
+
+                    img {
+                        filter: brightness(0.5);
+
+                        &:hover {
+                            transition: filter 0.4s ease;
+                            filter: brightness(0.6);
+                            cursor: pointer;
+                        }
+                    }
                 }
     
                 &__date {

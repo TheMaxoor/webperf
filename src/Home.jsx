@@ -1,29 +1,14 @@
 import React from 'react';
-import Swiper from './components/Swiper.jsx';
 import Fleuve from './components/Fleuve';
 import Direct from './components/Direct';
 import fleuveContent from './content/fleuveContent';
-
-const liveContent = [
-    {date: "14:35", tag: "Etats-Unis", text: "En meeting, Donald Trump fait huer les élues démocrates visées par ses tweets racistes", video: "https://www.youtube.com/embed/u4tkanu-72Y"},
-    {date: "14:12", tag: "Epidémie", text: "RDC : premier mort du virus Ebola à Goma"},
-    {date: '13:49', tag: 'Iran', text: "L'arrestation en Iran de la chercheuse franco-iranienne Fariba Adelkhah, directrice de recherche à la Fondation nationale des sciences politiques (FNSP) au Centre de recherches internationales (CERI) est «inadmissible et révoltante», a réagi Sciences Po mardi. «Nous sommes (...) en contact étroit et régulier avec la cellule de crise du ministère de l'Europe et des Affaires étrangères», précisent les présidents de la FNSP et de Sciences Po, Olivier Duhamel et Frédéric Mion, dans un message diffusé au sein de l'Institut. L'Autorité judiciaire iranienne a confirmé mardi l'arrestation de l'universitaire, annoncée la veille par Paris."},
-    {date: "13:32", tag: "Coup de filet", text: "Corse : quatre arrestations dont l'ex-chef du FLNC Charles Pieri pour abus de biens sociaux"},
-    {date: "12:43", tag: "Social", text: "Tati : fermeture de 13 magasins annoncée, 189 postes supprimés"},
-    {date: "12:18", tag: "Chez Pol", text: "Summer of love : la gauche veut profiter de l'été pour s'unir à Paris"},
-    {date: "12:02", tag: "Personnalité", text: "Sécher les cours pour combattre le dérèglement climatique : Greta Thunberg et les manifs étudiantes", video: "https://www.youtube.com/embed/oCVQdr9QFwY"},
-    {date: "11:59", tag: "Fin du numerus clausus", text: "Le Parlement adopte définitivement le projet de loi santé"},
-    {date: "11:34", tag: "Revues", text: "Cet été, le Monde dédie une série d'articles aux grandes revues scientifiques. Premier épisode : Nature, une publication centrale vieille de 150 ans, autant détestée que convoitée par les chercheurs pour y publier. Sur ce, je vous laisse avec Margaux Lacroux et vous dis à bientôt !"},
-    {date: "11:20", tag: "Attaque en diffamation", text: "«Mediapart n'a fait que son travail et continuera de le faire»"},
-    
-    {date: "", tag: "", text: "", video: ""},
-]
+import liveContent from './content/liveContent';
 
 class Home extends React.Component {
     render() {
         return (
             <div className="wp-homepage">
-                    <Fleuve elements={fleuveContent}/>
+                    <Fleuve elements={fleuveContent} />
                     <Direct elements={liveContent} />
             </div>
         );
