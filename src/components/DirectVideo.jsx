@@ -1,12 +1,39 @@
 import React from 'react';
 
 class DirectVideo extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            loadVideo: false
+        }
+        this.handleClickVideo = this.handleClickVideo.bind(this);
+    }
+
+    handleClickVideo(){
+        this.setState({
+            loadVideo: true
+        })
+    }
+
     render(){
         const element = this.props.element;
         return (
             <li className="wp-direct__body__collection__item">
                 <div>
-                    <iframe className="wp-direct__body__collection__item__video" width="295" height="170" src={element.video} frameBorder="0" allow="encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                    <div className="wp-direct__body__collection__item__video">
+                        { !this.state.loadVideo && (
+                            <div className="wp-direct__body__collection__item__video__miniature">
+                                <picture>
+                                    <source  type="image/webp" srcSet={'/images/' + element.miniatureWebp} />
+                                    <img src={'/images/' + element.miniatureWebp} width="295px" height="170px" onClick={this.handleClickVideo} />
+                                </picture>
+                            </div>
+                        )}
+                        { this.state.loadVideo && (
+                            <iframe width="295" height="170" src={element.video + "?autoplay=1"} frameBorder="0" allow="encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                        )}
+                    </div>
                     <span className="wp-direct__body__collection__item__date">{element.date}</span>
                     <span className="wp-direct__body__collection__item__tag">{element.tag}.</span>
                     <p className="wp-direct__body__collection__item__text" >{element.text}</p>
