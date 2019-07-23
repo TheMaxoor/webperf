@@ -8,6 +8,12 @@ Branches URLs : https://\<branch-name>.mrossignol.fr
 
 Branches are automatically deployed on push event.
 
+# Demo
+
+Base : https://webperf.mrossignol.fr
+Nettoyage Libs inutilisées : https://clean-js.webperf.mrossignol.fr
+
+
 ## Commands
 
 Install dependencies :
