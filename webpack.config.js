@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Terser = require('terser');
 
 module.exports = {
     mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
@@ -23,7 +24,7 @@ module.exports = {
                 include: /src/,
                 exclude: /node_modules/,
                 query: {
-                    presets: ['react']
+                    presets: ['@babel/preset-react']
                 }
             },
             {
@@ -63,6 +64,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'template.html'
         }),
-        new CopyWebpackPlugin([{ from: './libs/*', copyUnmodified: true }])
+        new CopyWebpackPlugin([
+            {
+                from: './libs/*',
+                transform: content => {
+                    return process.env.NODE_ENV === 'production'
+                        ? Terser.minify(content.toString()).code
+                        : content;
+                }
+            }
+        ])
     ]
 };
