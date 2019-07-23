@@ -12,6 +12,7 @@ Branches are automatically deployed on push event.
 
 - Base : https://webperf.mrossignol.fr
 - Nettoyage Libs inutilisées : https://clean-js.webperf.mrossignol.fr
+- Inclusion des scripts indépendants en Async : https://render-blocking.webperf.mrossignol.fr/
 
 ## Commands
 
