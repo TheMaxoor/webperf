@@ -1,4 +1,6 @@
 import React from 'react';
+import 'lazysizes';
+import 'lazysizes/plugins/attrchange/ls.attrchange';
 
 class DirectVideo extends React.Component {
 
