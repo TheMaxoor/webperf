@@ -68,6 +68,9 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
+                from: './_headers'
+            },
+            {
                 from: './libs/*',
                 transform: content => {
                     return process.env.NODE_ENV === 'production'
