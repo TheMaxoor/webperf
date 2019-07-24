@@ -22,7 +22,17 @@ class DirectVideo extends React.Component {
             <li className="wp-direct__body__collection__item">
                 <div>
                     <div className="wp-direct__body__collection__item__video">
-                        <iframe width="295" height="170" src={video} frameBorder="0" allow="encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                        { !this.state.loadVideo && (
+                            <div className="wp-direct__body__collection__item__video__miniature">
+                                <picture>
+                                    <source type="image/webp" srcSet={'/images/' + element.miniatureWebp} />
+                                    <img src={'/images/' + element.miniatureWebp} width="295px" height="170px" onClick={this.handleClickVideo} />
+                                </picture>
+                            </div>
+                        )}
+                        { this.state.loadVideo && (
+                            <iframe width="295" height="170" src={element.video + "?autoplay=1"} frameBorder="0" allow="encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                        )}
                     </div>
                     <span className="wp-direct__body__collection__item__date">{date}</span>
                     <span className="wp-direct__body__collection__item__tag">{tag}.</span>
