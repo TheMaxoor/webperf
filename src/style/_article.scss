@@ -8,6 +8,7 @@
 
     &__text {
         padding: 20px;
+        min-height: 83px;
 
         &__tag {
             background-color: $color_primary;
@@ -31,6 +32,8 @@
 
     img {
         width: 100%;
+        min-height: 219px;
+        min-width: 330px;
     }
 }
 
@@ -43,6 +46,13 @@
 
 .wp-image-article {
     width: 680px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        height: auto;
+    }
 
     .wp-article {
         &__text {
