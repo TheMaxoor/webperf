@@ -1,0 +1,7 @@
+# HTTP/2 Server Push for every site.
+/
+  Link: </bundle.js>; rel=preload; as=script
+  Link: </libs/lodash.js>; rel=preload; as=script
+  Link: </libs/jquery.js>; rel=preload; as=script
+  Link: </libs/expensive-script.js>; rel=preload; as=script
+  Link: </libs/ads-includer.js>; rel=preload; as=script
