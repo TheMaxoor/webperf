@@ -22,7 +22,7 @@ class Fleuve extends React.Component {
         return (
             <div className="wp-container_fleuve">
                 <Ad width="long" />
-                <Masonry className={'wp-fleuve'}>
+                <Masonry className={'wp-fleuve'} disableImagesLoaded={true}>
                     {childElements}
                 </Masonry>
             </div>
