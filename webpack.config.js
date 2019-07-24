@@ -72,8 +72,6 @@ module.exports = {
                 to: 'images',
                 context: 'src'
             }
-        ]),
-        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-        new ImageminWebpWebpackPlugin()
+        ])
     ]
 };

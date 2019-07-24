@@ -19,11 +19,7 @@ class Article extends React.Component {
             <article className={`${classname} wp-article`}>
                 <a href="">
                     {photoContent && (
-                        <picture>
-                            <source type="image/webp" srcSet={'/images/' + imageSmallWebp} />
-                            <source type="image/jpeg" srcSet={'/images/' + imageSmall} />
-                            <img src={'/images/' + image} alt="alt" />
-                        </picture>
+                        <img src={'/images/' + image} alt="alt" />
                     )}
                     <div className="wp-article__text">
                         <span className="wp-article__text__tag">{tag}</span>
