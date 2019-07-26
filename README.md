@@ -4,8 +4,6 @@
 
 Base URL: https://webperf.mrossignol.fr
 
-Branches URLs : https://\<branch-name>.mrossignol.fr
-
 Branches are automatically deployed on push event.
 
 # Demo
