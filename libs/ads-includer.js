@@ -1,12 +1,13 @@
 (function() {
     console.log('--- START ADS LOAD ---');
-    $(document).ready(function() {
+    window.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
-            $('.wp-ad').each(function(i) {
-                var $element = $(this);
-                $element.addClass('loaded');
-                $element.html('<div class="content">PUB</div>');
-            });
+            var ads = document.querySelectorAll('.wp-ad');
+            for (i = 0; i < ads.length; i++) {
+                var element = ads[i];
+                element.classList.add('loaded');
+                element.innerHTML = '<div class="content">PUB</div>';
+            }
         }, 2000);
         console.log('--- ADS LOADED ---');
     });
