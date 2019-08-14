@@ -12,7 +12,9 @@ class Article extends React.Component {
                 <a href="">
                     {photoContent && (
                         <picture>
-                            <img src={'/images/' + image} alt="alt" />
+                            <source type="image/webp" data-srcset={'/images/' + imageSmallWebp} />
+                            <source type="image/jpeg" data-srcset={'/images/' + imageSmall} />
+                            <img className="lazyload" data-src={'/images/' + image} src={'/images/placeholder.jpg'} alt="alt" />
                         </picture>
                     )}
                     <div className="wp-article__text">

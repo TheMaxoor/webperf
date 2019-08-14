@@ -23,7 +23,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: /src/,
+                include: [/src/, /libs/],
                 exclude: /node_modules/,
                 query: {
                     presets: ['@babel/preset-react']
