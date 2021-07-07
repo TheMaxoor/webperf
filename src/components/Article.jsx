@@ -12,6 +12,8 @@ class Article extends React.Component {
                 <a href="">
                     {photoContent && (
                         <picture>
+                            <source type="image/webp" srcSet={'/images/' + imageSmallWebp} />
+                            <source type="image/jpeg" srcSet={'/images/' + imageSmall} />
                             <img src={'/images/' + image} alt="alt" />
                         </picture>
                     )}
