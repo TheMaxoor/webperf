@@ -42,7 +42,7 @@
         "style-loader": "^0.23.1",
         "terser": "^4.1.2",
         "webpack": "^4.11.1",
-        "webpack-cli": "3.0.2"
+        "webpack-cli": "3.3.12"
     },
     "engines": {
         "node": "8.11.3"
